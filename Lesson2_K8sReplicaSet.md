@@ -32,6 +32,11 @@ spec:
         - containerPort: 80
 
 ```
+Once we are ready with the file, we can run the below command:
+
+```
+kubectl create -f replication.yaml
+```
 
 
 
