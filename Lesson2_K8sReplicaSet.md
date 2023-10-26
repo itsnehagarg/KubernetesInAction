@@ -39,7 +39,14 @@ kubectl create -f replication.yaml
 ```
 It will create 3 replicas as mentioned in the rc definition file above and you can check that using the command:
 
-``` kubectl get replicationcontroller ```
+```
+kubectl get replicationcontroller
+ ```
+
+![image](https://github.com/itsnehagarg/KubernetesInAction/assets/20385826/ca01c3f1-e040-42d7-ae89-eb5c8c944fad)
+
+All the pods have starting nae as nginx which shows that these pods are created by the replication controller.
+
 
 
 
