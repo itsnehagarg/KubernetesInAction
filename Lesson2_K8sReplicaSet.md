@@ -37,6 +37,10 @@ Once we are ready with the file, we can run the below command:
 ```
 kubectl create -f replication.yaml
 ```
+It will create 3 replicas as mentioned in the rc definition file above and you can check that using the command:
+
+``` kubectl get replicationcontroller ```
+
 
 
 
