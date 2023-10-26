@@ -47,6 +47,28 @@ kubectl get replicationcontroller
 
 All the pods have starting nae as nginx which shows that these pods are created by the replication controller.
 
+## Diff between RS & RC: Selectors in RS is mandatory but it is not a mandatory one in RC
+
+Replica Sets require a selector definition in its yaml file. It helps in determining what pods will fall under it if we have provided the pods definition file.
+
+RS can also create pods that we have not created in RS definition yaml file. Selectors provide match labels.
+
+### Commands used with RS:
+
+```
+kubectl create -f replicaset-definition.yml
+```
+
+```
+kubectl get replicaset
+```
+
+```
+kubectl get pods
+```
+
+
+
 
 
 
