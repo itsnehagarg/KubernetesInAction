@@ -47,13 +47,40 @@ kubectl get replicationcontroller
 
 All the pods have starting nae as nginx which shows that these pods are created by the replication controller.
 
-## Diff between RS & RC: Selectors in RS is mandatory but it is not a mandatory one in RC
+# Replica Sets
+
+```
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: frontend
+  labels:
+    app: guestbook
+    tier: frontend
+spec:
+  # modify replicas according to your case
+  replicas: 3
+  selector:
+    matchLabels:
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        tier: frontend
+    spec:
+      containers:
+      - name: php-redis
+        image: gcr.io/google_samples/gb-frontend:v3
+
+```
+
+## Diff between Replica Sets & RC: Selectors in RS is mandatory but it is not a mandatory one in RC
 
 Replica Sets require a selector definition in its yaml file. It helps in determining what pods will fall under it if we have provided the pods definition file.
 
-RS can also create pods that we have not created in RS definition yaml file. Selectors provide match labels.
+Replica Sets can also create pods that we have not created in RS definition yaml file. Selectors provide match labels.
 
-### Commands used with RS:
+### Commands used with Replica Sets:
 
 ```
 kubectl create -f replicaset-definition.yml
@@ -66,6 +93,28 @@ kubectl get replicaset
 ```
 kubectl get pods
 ```
+
+### Advantages of Replica Sets:
+
+- Replica SEts can be used to monitor to already existing pods that have already been created.
+- If the pods are not created, Replica Sets will create it for you.
+- Replica Sets will monitor the pods and if any pod fails it will create a new pod for you.
+- Labeling the pods during creation of the pods enables RS to know which pods to monitor.
+- Under the slector: matchLabels: tier: we will use the same labels that were used during the creation of the pods.
+- Scaling of the pods can be done by specifying in Replica Set definition yaml file.
+
+#### Scaling using Replica Sets
+1. Scaling of the pods can be done by specifying in Replica Set definition yaml file.
+2. Then run the command
+
+```
+kubectl replace -f replicaset-definition.yml
+```
+
+
+
+
+
 
 
 
