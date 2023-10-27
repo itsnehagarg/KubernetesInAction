@@ -141,6 +141,10 @@ kubectl scale --replicas=6 -f replicaset-definition.yml
 kubectl replace -f replicaset-definition.yml
 ```
 
+## Hands-On Replica sets:
+
+
+
 
 
 
