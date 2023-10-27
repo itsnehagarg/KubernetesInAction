@@ -8,8 +8,8 @@ In this Kubernetes repository, we will be going step by step to understandthe ba
 ## Kubernetes Components
 
 
-1. [Pods](https://github.com/itsnehagarg/KubernetesInAction/blob/main/Lesson1K8sPods.md)
-2. [Replica Controllers & Replica Sets](https://github.com/itsnehagarg/KubernetesInAction/blob/main/Lesson2_K8sReplicaSet.md)
+1. [Pods](https://github.com/itsnehagarg/KubernetesInAction/blob/main/KubernetesLessons/Lesson1K8sPods.md)
+2. [Replica Controllers & Replica Sets](https://github.com/itsnehagarg/KubernetesInAction/blob/main/KubernetesLessons/Lesson2_K8sReplicaSet.md)
 
 
 
