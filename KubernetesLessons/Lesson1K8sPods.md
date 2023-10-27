@@ -1,4 +1,4 @@
-# ✨ Some basic commands for Pods in Kubernetes:
+# ✨ Pods in Kubernetes:
 
 ### 1. how many pods exists in the system?
 
