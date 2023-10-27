@@ -110,8 +110,36 @@ kubectl get pods
 ```
 kubectl replace -f replicaset-definition.yml
 ```
+3. Another way to do it is usning the below command:
+```
+kubectl scale --replicas=6 -f replicaset-definition.yml
+```
 
+## Commands Review:
 
+1. Create new replica set:
+```
+kubectl create -f replicaset-definition.yml
+```
+2. Fetch all the existing replica sets:
+```
+kubectl get replicaset
+```
+
+3. It will delete the replicaset along with the underlying pods:
+
+```
+kubectl delete replicaset replicaset-name
+```
+4. Scale replica set from the command line instead of modifying the replicaset yaml file:
+
+```
+kubectl scale --replicas=6 -f replicaset-definition.yml
+```
+5. Replace replica set:
+```
+kubectl replace -f replicaset-definition.yml
+```
 
 
 
