@@ -143,7 +143,8 @@ kubectl replace -f replicaset-definition.yml
 
 ## Hands-On Replica sets:
 
-
+1. Command to get the number of replica sets:  kubectl get replicaset
+2. Number of pods are desired in the replica set?
 
 
 
