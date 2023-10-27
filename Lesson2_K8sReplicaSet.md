@@ -1,4 +1,4 @@
-## Replica Controllers
+## Replica Controllers and Replica Sets in K8s
 
 Why do we need Replication Controller?
 
