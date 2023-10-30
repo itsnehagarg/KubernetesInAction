@@ -2,7 +2,32 @@
 
 A Kubernetes namespace provides the scope for Pods, Services, and Deployments in the cluster. Users interacting with one namespace do not see the content in another namespace. A K8s namespaces allows you to organize resources within your namespace.
 
-Create a new namespace using the below yaml file: Let us call it namespace-dev.yaml:
+#### To view the existing namespaces use the below command:
+```
+kubectl get namespaces
+```
+![image](https://github.com/itsnehagarg/KubernetesInAction/assets/20385826/61b1c231-9148-4ed8-b55e-33ba60a66e83)
+
+- We can see that K8s provides the above namespaces by default.
+- kube-system namespace: We should not create anything in this namespace. The components in this namespace are system processes.
+- kube-public: publicly accessible data. By running the below command we get the output of the publicly accessible data.
+`` kubectl cluster-info
+``
+- kube-node-lease: It contains information about the heartbeats of the nodes.
+- default
+
+## Two ways to create a namespace:
+
+## 1: We can create our namespace using the below command:
+
+```
+kubectl create namespace my-namespace
+```
+
+![image](https://github.com/itsnehagarg/KubernetesInAction/assets/20385826/c8dbd406-21e1-4148-a937-8e66752ce0b3)
+
+## 2: Create a new namespace using the below yaml file: Let us call it namespace-dev.yaml (better way to create a namespace):
+
 ```
 apiVersion: v1
 kind: Namespace
@@ -30,25 +55,7 @@ kubectl get pods
 ```
 kubectl get pods --namespace=prod
 ```
-#### To view the existing namespaces use the below command:
-```
-kubectl get namespaces
-```
-![image](https://github.com/itsnehagarg/KubernetesInAction/assets/20385826/61b1c231-9148-4ed8-b55e-33ba60a66e83)
 
-- We can see that K8s provides the above namespaces by default.
-- kube-system namespace: We should not create anything in this namespace. The components in this namespace are system processes.
-- kube-public: publicly accessible data. By running the below command we get the output of the publicly accessible data.
-`` kubectl cluster-info
-``
-- kube-node-lease: It contains information about the heartbeats of the nodes.
-- default
-
-We can create our namespace using the below command:
-```
-kubectl create namespace my-namespace
-```
-![image](https://github.com/itsnehagarg/KubernetesInAction/assets/20385826/c8dbd406-21e1-4148-a937-8e66752ce0b3)
 
 
 
