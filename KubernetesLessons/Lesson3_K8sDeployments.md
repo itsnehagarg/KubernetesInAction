@@ -39,4 +39,8 @@ kubectl get deployments
 ```
 kubectl get replicaset
 ```
+#### And replica sets will automatically create pods so when we fetch the list of pods we can view the pods that were created by the replica sets:
+```
+kubectl get pods
+```
 
