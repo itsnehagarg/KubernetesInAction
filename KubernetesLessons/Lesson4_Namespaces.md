@@ -1,5 +1,7 @@
 ## Namespaces in K8s
 
+A Kubernetes namespace provides the scope for Pods, Services, and Deployments in the cluster. Users interacting with one namespace do not see the content in another namespace.
+
 Create a new namespace using the below yaml file: Let us call it namespace-dev.yaml:
 ```
 apiVersion: v1
