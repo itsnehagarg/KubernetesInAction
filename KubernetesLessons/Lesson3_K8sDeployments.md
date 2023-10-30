@@ -27,4 +27,16 @@ spec:
         - containerPort: 80
 ```
 
+## To create a deployment use the below command:
+```
+kubectl create -f deployment-definition.yaml
+```
+## To get the deployments:
+```
+kubectl get deployments
+```
+#### Deployment automatically creates a new replica set and we see a new replica sets created when we run the command to get the replica sets.
+```
+kubectl get replicaset
+```
 
