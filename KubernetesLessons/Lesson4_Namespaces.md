@@ -2,6 +2,13 @@
 
 A Kubernetes namespace provides the scope for Pods, Services, and Deployments in the cluster. Users interacting with one namespace do not see the content in another namespace. A K8s namespaces allows you to organize resources within your namespace.
 
+#### Why do we need Namespaces in K8s?
+1. Logical grouping of the resources
+2. Resource sharing
+3. Different teams can have different namespaces to avoid conflicts
+4. Blue/ Green Deployment resource sharing
+5. Limit resources access when working with many teams
+
 #### To view the existing namespaces use the below command:
 ```
 kubectl get namespaces
