@@ -43,4 +43,7 @@ kubectl get replicaset
 ```
 kubectl get pods
 ```
+![image](https://github.com/itsnehagarg/KubernetesInAction/assets/20385826/fa079347-90e8-4bfd-90d6-0f428c8f79ec)
+
+
 
