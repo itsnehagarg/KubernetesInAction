@@ -62,7 +62,36 @@ kubectl get pods
 ```
 kubectl get pods --namespace=prod
 ```
+##### By default, components are created in default namespace.
 
+#### In order to create a component in a specific namespace use the below command (1st way):
+
+##### set the “namespace” flag when creating the resource:
+```
+kubectl apply -f configmap.yaml --namespace=my-namepsace
+
+kubectl apply -f pod.yaml --namespace=test
+
+```
+
+#### Inside the configmap.yaml file itself specify the namespace (2nd way):
+
+##### You can also specify a Namespace in the YAML declaration.
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+  namespace: test
+  labels:
+    name: mypod
+spec:
+  containers:
+  - name: mypod
+    image: nginx
+
+```
 
 
 
