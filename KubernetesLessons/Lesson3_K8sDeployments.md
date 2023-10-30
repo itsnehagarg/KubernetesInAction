@@ -45,5 +45,12 @@ kubectl get pods
 ```
 ![image](https://github.com/itsnehagarg/KubernetesInAction/assets/20385826/fa079347-90e8-4bfd-90d6-0f428c8f79ec)
 
+## To view all the objects that were created using one command, use the below cmd:
+
+```
+kubectl get all
+```
+
+![image](https://github.com/itsnehagarg/KubernetesInAction/assets/20385826/a2d83ca3-accf-426b-bb8f-1edc492a1e40)
 
 
