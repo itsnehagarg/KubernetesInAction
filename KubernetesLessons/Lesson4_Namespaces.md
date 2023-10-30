@@ -30,3 +30,9 @@ kubectl get pods
 ```
 kubectl get pods --namespace=prod
 ```
+#### To view the existing namespaces use the below command:
+```
+kubectl get namespaces
+```
+![image](https://github.com/itsnehagarg/KubernetesInAction/assets/20385826/61b1c231-9148-4ed8-b55e-33ba60a66e83)
+
